@@ -1,3 +1,7 @@
+# this coding for flappy bird like game 
+
+
+
 import pygame
 import random
 
@@ -23,11 +27,11 @@ bird_movement = 0
 floor_x_pos = 0
 
 # Load images
-floor_surface = pygame.image.load("base.png")
-bg_surface = pygame.image.load("background-night.png").convert()
+floor_surface = pygame.image.load("base.png") #add base image 
+bg_surface = pygame.image.load("background-night.png").convert() # background image
 bg_surface = pygame.transform.scale(bg_surface, (WIDTH, HEIGHT))
 
-bird_surface = pygame.image.load("chr2.png").convert_alpha()
+bird_surface = pygame.image.load("chr2.png").convert_alpha() # add cj\haractor img
 bird_surface = pygame.transform.scale(bird_surface, (80, 100))
 bird_rect = bird_surface.get_rect(center=(100, HEIGHT / 3))
 
@@ -37,7 +41,7 @@ SPAWNPIPE = pygame.USEREVENT
 pygame.time.set_timer(SPAWNPIPE, 1200)
 pipe_heights = [200, 300, 400]
 
-game_font = pygame.font.Font("04B_03B_.TTF", 40)
+game_font = pygame.font.Font("04B_03B_.TTF", 40) # add sutable font
 score = 0
 high_score = 0
 
